@@ -3,7 +3,12 @@
 /******************************************************************************/
 
 const convertToBase16 = element => {
-  // Your code here 
+  if(element[1] === 'b') {
+    let newElement = parseInt(element.slice(2), 2);
+    return `0x${newElement.toString(16)}`;
+  } else {
+    return `0x${element.toString(16)}`;
+  }
 };
 
 /******************************************************************************/
